@@ -1,0 +1,7 @@
+bin/
+obj/
+App_Data/
+.local-dotnet/
+*.user
+tests/run-*/
+tests/befit-tests-*/

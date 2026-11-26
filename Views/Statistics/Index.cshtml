@@ -1,0 +1,5 @@
+@model List<StatisticsRow>
+@{ViewData["Title"]="Statystyki";}
+<div class="page-heading"><div><h1>Statystyki</h1><p>@(((DateTime)ViewBag.Since).ToString("dd.MM.yyyy HH:mm")) – @(((DateTime)ViewBag.Now).ToString("dd.MM.yyyy HH:mm"))</p></div></div>
+
+<div class="section-heading"><h2>Wyniki według ćwiczenia</h2></div><div class="table-wrap"><table><thead><tr><th>Ćwiczenie</th><th>Wykonania</th><th>Łącznie powtórzeń</th><th>Średnie obciążenie</th><th>Maksymalne obciążenie</th></tr></thead><tbody>@foreach(var row in Model){<tr><td>@row.Name</td><td>@row.Count</td><td>@row.TotalRepetitions</td><td>@(row.AverageWeight.HasValue?row.AverageWeight.Value.ToString("0.##")+" kg":"—")</td><td>@(row.MaxWeight.HasValue?row.MaxWeight.Value.ToString("0.##")+" kg":"—")</td></tr>}</tbody></table></div><p class="muted">Jedno wykonanie to jeden zapis ćwiczenia. Łączna liczba powtórzeń to suma serii × powtórzenia. Średnia jest liczona z obciążeń poszczególnych wpisów. Uwzględniamy wyłącznie Twoje treningi rozpoczęte w tym okresie; przyszłe treningi są pomijane.</p>

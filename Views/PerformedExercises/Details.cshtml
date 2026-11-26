@@ -1,0 +1,13 @@
+@model PerformedExercise
+@{ ViewData["Title"] = "Szczegóły wykonania"; }
+<h1>Szczegóły wykonania</h1>
+<dl>
+    <dt>Ćwiczenie</dt><dd>@Model.ExerciseType?.Name</dd>
+    <dt>Trening</dt><dd>@Model.TrainingSession?.Name</dd>
+    <dt>Data</dt><dd>@Model.TrainingSession?.Start.ToString("dd.MM.yyyy HH:mm")</dd>
+    <dt>Obciążenie</dt><dd>@Model.Weight.ToString("0.##") kg</dd>
+    <dt>Liczba serii</dt><dd>@Model.Sets</dd>
+    <dt>Powtórzenia w serii</dt><dd>@Model.Repetitions</dd>
+</dl>
+<p><a asp-action="Edit" asp-route-id="@Model.Id">Edytuj</a></p>
+<a asp-controller="TrainingSessions" asp-action="Details" asp-route-id="@Model.TrainingSessionId">Wróć do treningu</a>

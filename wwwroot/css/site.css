@@ -1,0 +1,35 @@
+body {
+    max-width: 1000px;
+    margin: 24px auto;
+    padding: 0 16px;
+    font: 16px Arial, sans-serif;
+    color: #222;
+}
+a { color: #175a91; }
+header { border-bottom: 1px solid #aaa; padding-bottom: 16px; }
+nav, .account, .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 16px; }
+.account form { margin: 0; }
+main { margin-top: 28px; }
+h1 { font-size: 26px; }
+h2 { font-size: 20px; }
+p { line-height: 1.5; }
+form { max-width: 520px; }
+label { display: block; margin: 16px 0 6px; }
+input, select, textarea { display: block; box-sizing: border-box; width: 100%; padding: 7px; font: inherit; }
+button { padding: 7px 14px; font: inherit; cursor: pointer; }
+form button { margin-top: 16px; }
+.account button { margin: 0; }
+small { display: block; margin-top: 6px; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; text-align: left; }
+th, td { border: 1px solid #bbb; padding: 10px; }
+th { background: #eee; }
+td.actions { display: table-cell; }
+td.actions a { display: inline-block; margin: 0 10px 4px 0; }
+.validation-summary-valid, .field-validation-valid { display: none; }
+.validation-summary-errors, .field-validation-error { color: #a12020; }
+.input-validation-error { border: 1px solid #a12020; }
+.pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+dt { font-weight: bold; margin-top: 14px; }
+dd { margin: 5px 0 0; }
+:focus-visible { outline: 2px solid #175a91; outline-offset: 3px; }

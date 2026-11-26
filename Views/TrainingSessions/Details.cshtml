@@ -1,0 +1,5 @@
+@model TrainingSession
+@{ViewData["Title"]=Model.Name;}
+<a class="back" asp-action="Index">Moje treningi</a><div class="page-heading"><div><h1>@Model.Name</h1><p>@Model.Start.ToString("dd.MM.yyyy HH:mm") – @Model.End.ToString("dd.MM.yyyy HH:mm") · @((int)(Model.End-Model.Start).TotalMinutes) min</p></div><a class="button secondary" asp-action="Edit" asp-route-id="@Model.Id">Edytuj trening</a></div>
+@if(!string.IsNullOrWhiteSpace(Model.Notes)){<p class="panel pre">@Model.Notes</p>}<div class="section-heading"><h2>Wykonane ćwiczenia</h2><a class="button" asp-controller="PerformedExercises" asp-action="Create" asp-route-sessionId="@Model.Id">Dodaj wykonanie</a></div>
+@if(Model.Exercises.Count==0){<div class="empty"><p>Nie zapisano jeszcze ćwiczeń w tym treningu.</p></div>}else{<partial name="_ExerciseTable" model="Model.Exercises"/>}

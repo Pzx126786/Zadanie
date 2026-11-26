@@ -1,0 +1,2 @@
+@model PerformedExercise
+@{ViewData["Title"]="Potwierdź usunięcie";}<div class="form-card"><h1>Usunąć wpis?</h1><h2>@Model.ExerciseType?.Name</h2><p>Tej operacji nie można cofnąć.</p><form method="post"><div asp-validation-summary="All"></div><div class="actions"><button class="danger">Usuń</button><a asp-action="Index">Anuluj</a></div></form></div>

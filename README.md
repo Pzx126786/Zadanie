@@ -4,7 +4,7 @@ BeFit służy do zapisywania treningów i sprawdzania swoich wyników. Poniżej 
 
 ## 1. Rozpakuj aplikację
 
-1. Kliknij prawym przyciskiem myszy plik `.zip`.
+1. Kliknij prawym przyciskiem myszy plik `BeFit.zip`.
 2. Wybierz **Wyodrębnij wszystkie**, a następnie **Wyodrębnij**.
 3. Otwórz rozpakowany folder **BeFit**. Znajdziesz w nim plik `Uruchom.cmd`.
 

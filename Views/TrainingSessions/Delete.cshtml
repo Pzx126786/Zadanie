@@ -1,0 +1,2 @@
+@model TrainingSession
+@{ViewData["Title"]="Potwierdź usunięcie";}<div class="form-card"><h1>Usunąć wpis?</h1><h2>@Model.Name</h2><p>Usunięte zostaną także wszystkie wykonane ćwiczenia z tego treningu.</p><form method="post"><div asp-validation-summary="All"></div><div class="actions"><button class="danger">Usuń</button><a asp-action="Index">Anuluj</a></div></form></div>

@@ -1,0 +1,3 @@
+@model ExerciseType
+@{ViewData["Title"]=Model.Name;}
+<a class="back" asp-action="Index">Katalog ćwiczeń</a><h1>@Model.Name</h1><div class="panel"><p class="pre">@(Model.Description??"Brak dodatkowego opisu.")</p></div>@if(User.IsInRole("Administrator")){<a class="button" asp-action="Edit" asp-route-id="@Model.Id">Edytuj ćwiczenie</a>}

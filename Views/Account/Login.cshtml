@@ -1,0 +1,3 @@
+@model LoginModel
+@{ViewData["Title"]="Logowanie";}
+<div class="form-card"><h1>Logowanie</h1><p class="muted">Zaloguj się do swojego dziennika.</p><form method="post"><div asp-validation-summary="All"></div><label asp-for="Email"></label><input asp-for="Email" type="email" autocomplete="username" required/><label asp-for="Password"></label><input asp-for="Password" autocomplete="current-password" required/><button>Zaloguj się</button></form><p>Pierwszy raz? <a asp-action="Register">Utwórz konto</a></p></div>

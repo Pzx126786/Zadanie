@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] — BeFit</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+<header>
+    <a asp-controller="Home" asp-action="Index">BeFit</a>
+    <nav aria-label="Menu główne">
+        <a asp-controller="ExerciseTypes" asp-action="Index">Typy ćwiczeń</a>
+        <a asp-controller="TrainingSessions" asp-action="Index">Moje treningi</a>
+        <a asp-controller="PerformedExercises" asp-action="Index">Wykonane ćwiczenia</a>
+        <a asp-controller="Statistics" asp-action="Index">Statystyki</a>
+    </nav>
+    <div class="account">
+        @if (User.Identity?.IsAuthenticated == true)
+        {
+            <span>@User.Identity.Name</span>
+            <form asp-controller="Account" asp-action="Logout" method="post"><button>Wyloguj</button></form>
+        }
+        else
+        {
+            <a asp-controller="Account" asp-action="Login">Logowanie</a>
+            <a asp-controller="Account" asp-action="Register">Rejestracja</a>
+        }
+    </div>
+</header>
+<main>@RenderBody()</main>
+</body>
+</html>
